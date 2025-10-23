@@ -32,32 +32,49 @@ model User {
   onboarding_completed  Boolean?    @default(false)
   records               Record[]
   tips                  Tip[]
+  goals                 Goal[]
   @@map("users")
 }
 
 model Record {
-  id          Int         @id @default(autoincrement())
-  userId      Int
-  date        DateTime    @default(now())
-  category    String
-  value       Float
-  unit        String
-  cost        Float?
-  notes       String?
-  user        User        @relation(fields: [userId], references: [id])
+  id                Int           @id @default(autoincrement())
+  user_id           Int 
+  date              DateTime      @default(now())
+  category          String  
+  value             Float 
+  unit              String  
+  cost              Float?  
+  notes             String? 
+  user              User          @relation(fields: [user_id], references: [id])
   @@map("records")
 }
 
 model Tip {
-  id          Int         @id @default(autoincrement())
-  userId      Int
-  title       String
-  content     String
-  category    String
-  difficulty  String
-  impact      String
-  liked       Boolean     @default(false)
-  implemented Boolean     @default(false)
-  user        User        @relation(fields: [userId], references: [id])
+  id                Int           @id @default(autoincrement())
+  user_id           Int 
+  title             String  
+  content           String  
+  category          String  
+  difficulty        String  
+  impact            String  
+  liked             Boolean       @default(false)
+  implemented       Boolean       @default(false)
+  user              User          @relation(fields: [user_id], references: [id])
   @@map("tips")
+}
+
+model Goal {
+  id                Int           @id @default(autoincrement())
+  user_id           Int
+  title             String
+  description       String
+  category          String
+  target_value      Float?
+  current_value     Float?        @default(0)
+  unit              String?
+  deadline          DateTime?
+  status            String        @default("active")
+  reward_points     Int           @default(15)
+  user              User          @relation(fields: [user_id], references: [id])
+  @@map("goals")
 }

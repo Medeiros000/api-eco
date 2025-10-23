@@ -1,13 +1,10 @@
+// src/app/api/users/route.ts
 import { NextResponse } from "next/server";
 import prisma from "@/app/lib/prisma";
 
 export async function GET() {
 	try {
 		const users = await prisma.user.findMany({
-			include: {
-				records: true,
-        tips: true,
-			},
 			orderBy: {
 				id: "asc",
 			},

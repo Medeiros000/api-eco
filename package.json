@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest"
   },
   "dependencies": {
     "@prisma/client": "^6.18.0",
@@ -20,11 +21,15 @@
     "@types/node": "^20.19.23",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/ui": "^4.0.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.0",
+    "happy-dom": "^20.0.8",
+    "jsdom": "^27.0.1",
     "prisma": "^6.18.0",
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.1"
   }
 }
