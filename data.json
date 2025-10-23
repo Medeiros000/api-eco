@@ -1,0 +1,53 @@
+[
+    {
+        "id": "rec-1",
+        "userId": "user-1",
+        "date": "2025-10-20",
+        "category": "water",
+        "value": 380,
+        "unit": "litros",
+        "cost": 8.5,
+        "notes": "Banhos curtos e reaproveitamento"
+    },
+    {
+        "id": "rec-2",
+        "date": "2025-10-17",
+        "category": "energy",
+        "value": 28,
+        "unit": "kwh",
+        "cost": 22.4,
+        "notes": "Uso consciente dos equipamentos"
+    },
+    {
+        "id": "rec-3",
+        "date": "2025-10-15",
+        "category": "waste",
+        "value": 4.2,
+        "unit": "kg",
+        "cost": 0
+    },
+    {
+        "id": "rec-4",
+        "date": "2025-10-21",
+        "category": "water",
+        "value": 420,
+        "unit": "litros",
+        "cost": 9.3
+    },
+    {
+        "id": "rec-5",
+        "date": "2025-10-19",
+        "category": "energy",
+        "value": 26,
+        "unit": "kwh",
+        "cost": 21.1
+    },
+    {
+        "id": "rec-6",
+        "date": "2025-10-12",
+        "category": "transportation",
+        "value": 120,
+        "unit": "km",
+        "cost": 45
+    }
+]
